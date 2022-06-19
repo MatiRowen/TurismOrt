@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Preferencias de viaje</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Work+Sans:wght@600&display=swap" rel="stylesheet">   
+</head>
+
+
+<body>
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="video7.mp4" type="video/mp4">
+
+    </video>
+   
+    <div id="first-part">
+    <div>
+    <img id="Logo" src="/img/TurismORT.png"/>
+    </div>
+    <div class="title">
+        <h2>TurismOrt <br> Juntos desde siempre </h2> 
+    </div>
+    </div>
+
+
+    <form id="form-two" action="EncuestaPagina3.html" >
+        <h2>Preferencias de viaje</h2> 
+        <br>
+   
+    <div id="full-form">
+    
+    <div id="first-form">
+        <label class="form-two-fonts" for="places">Actividad Preferida</label><br>
+        
+        <div>
+            <img class="icons" src="/img/beach.png" title="Playa">
+            <input type="radio" class="field" name="activity" value="beach"><br>
+        </div>
+        <div>
+            <img class="icons" src="/img/snow.png" title="Nieve">
+            <input type="radio" class="field" name="activity" value="snow"><br>
+        </div>
+        <div>
+            <img class="icons" src="/img/city.png" title="Ciudad">
+            <input type="radio" class="field" name="activity" value="city"><br>
+        </div>
+        <div>
+            <img class="icons" src="/img/mountain.png" title="Montaña">
+            <input type="radio" class="field" name="activity" value="mountain"><br>
+        </div>
+    </div>
+   
+    <div id="first-form">
+        <label class="form-two-fonts" for="places">Comidas Preferidas</label><br>
+        <div>
+            <img class="icons" src="/img/pizza.png" title="Pizza">
+            <input type="checkbox" class="field" name="food" value="Pizza"><br>
+        </div>
+        <div>
+
+            <img class="icons" src="/img/fideos.png" title="Fideos">
+            <input type="checkbox" class="field" name="food" value="Fideos"><br>
+        </div>
+        <div>
+            <img class="icons" src="/img/arroz.png" title="Arroz">
+            <input type="checkbox" class="field" name="food" value="Arroz"><br>
+        </div>
+        <div>
+            <img class="icons" src="/img/helado.png" title="Helado">
+            <input type="checkbox" class="field" name="food" value="Helado"><br>
+        </div>
+
+        <div>
+            <img class="icons" src="/img/hamburguesa.png" title="Hamburguesa">
+            <input type="checkbox" class="field" name="food" value="Hamburguesa"><br>
+        </div>
+    </div>
+    <div id="first-form">
+        <label class="form-two-fonts" for="country">Continente al que desees viajar</label> <br>
+        <select class="field" name="city" required>
+          <option value="0"></option>
+          <option value="1">Asia</option>
+          <option value="2">África</option>
+          <option value="3">América del Norte</option>
+          <option value="4">América del Sur</option>
+          <option value="5">Antártida</option>
+          <option value="6">Europa</option>
+          <option value="7">Oceania</option>
+        </select>
+    </div>
+    </div>    
+        
+        <button type="submit" class="btn">Seguir encuesta</button>
+    </form>
+    
+    <a href="EncuestaPagina1.html"><button type="submit" class="btn-before">Volver</button></a>
+  
+  
+</body>
+</html>

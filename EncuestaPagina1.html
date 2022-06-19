@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Datos Personales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Work+Sans:wght@600&display=swap" rel="stylesheet">   
+</head>
+
+
+<body onload="Validaciones()">
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="video7.mp4" type="video/mp4">
+    </video>
+   
+    <div id="first-part">
+        <div>
+        <img id="Logo" src="/img/TurismORT.png"/>
+        </div>
+        <div class="title">
+            <h2>TurismOrt <br> Juntos desde siempre </h2> 
+        </div>
+    </div>
+    
+
+    <form action="EncuestaPagina2.html" >
+        <h2>Datos Personales</h2> 
+        <br>
+        Nombre<br>
+        <input type="text" class="field" name="username" size="40" maxlength="100" required pattern="{3,100}"/> <br>
+        <br>
+        Apellido<br>
+        <input type="text" class="field" name="surname" size="40" maxlength="100" required pattern="{3,100}"/> <br>
+        <br>
+        Email<br>
+        <input type="email" class="field" name="email"size="40" maxlength="100" required pattern="{3,100}"/> <br>
+        <br>
+        Contraseña<br>
+        <input type="password" class="field" id="password" name="password" size="40" required maxlength=25 /> <br>
+        <br>
+        Confirmar contraseña<br>
+        <input type="password" class="field" name="repeatpassword" size="40"  required maxlength=25 /> <br>
+        <br>
+        Fecha de nacimiento<br>
+        <input type="date" class="field" name="date"size="50" required pattern/> <br>
+        <br>
+        Localidad<br>
+        <input type="text" class="field" name="location" size="40" maxlength="50"/> <br>
+        <br>
+        <label for="country">Provincia</label> <br>
+        <select name="localidad" class="field"  required>
+          <option value="0"></option>
+          <option value="1">Buenos Aires</option>
+          <option value="2">Capital Federal</option>
+          <option value="3">Catamarca</option>
+          <option value="4">Chaco</option>
+          <option value="5">Chubut</option>
+          <option value="6">Córdoba</option>
+          <option value="7">Corrientes</option>
+          <option value="8">Entre Ríos</option>
+          <option value="9">Formosa</option>
+          <option value="10">Jujuy</option>
+          <option value="11">La Pampa</option>
+          <option value="La Rioja">La Rioja</option>
+          <option value="Mendoza">Mendoza</option>
+          <option value="Misiones">Misiones</option>
+          <option value="Neuquén">Neuquén</option>
+          <option value="Río Negro">Río Negro</option>
+          <option value="Salta">Salta</option>
+          <option value="San Juan">San Juan</option>
+          <option value="San Luis">San Luis</option>
+          <option value="Santa Cruz">Santa Cruz</option>
+          <option value="Santa Fe">Santa Fe</option>
+          <option value="Santiago del Estero">Santiago del Estero</option>
+          <option value="Tierra del Fuego">Tierra del Fuego</option>
+          <option value="Tucumán">Tucumán</option>
+        </select>
+        <br>
+        <button type="submit" class="btn">Registrarse</button>
+        
+    </form>
+
+    <a href="index.html"><button type="submit" class="btn-before">Volver</button></a>
+
+    <script>
+    function Validaciones() 
+    {
+        var intputElements = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < intputElements.length; i++) {
+            intputElements[i].oninvalid = function (e) {
+                e.target.setCustomValidity("");
+                if (!e.target.validity.valid) {
+                    
+                    if (e.target.name == "username") {
+                        e.target.setCustomValidity("Ingresa tu nombre");
+                    }
+                    else if(e.target.name == "surname"){
+                        e.target.setCustomValidity("Ingresa tu apellido");
+                    }
+                    else if(e.target.name == "email"){
+                        e.target.setCustomValidity("Ingresa tu email");
+                    }
+                    else if(e.target.name == "password"){
+                        e.target.setCustomValidity("Ingresa tu contraseña");
+                    }
+                    else if(e.target.name == "repeatpassword"){
+                        e.target.setCustomValidity("Confirme tu contraseña");
+                    }
+                    else if(e.target.name == "date"){
+                        e.target.setCustomValidity("Ingresa tu fecha de nacimiento");
+                    }
+                    else if(e.target.name == "localidad") {
+                        e.target.setCustomValidity("Ingresa tu localidad");
+                    }
+                }
+            }
+        }
+    }  
+    </script>
+  
+</body>
+</html>

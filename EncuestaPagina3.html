@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Información Familiar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Work+Sans:wght@600&display=swap" rel="stylesheet">   
+</head>
+
+
+<body onload="Validaciones()">
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="video7.mp4" type="video/mp4">
+
+    </video>
+   
+    <div id="first-part">
+        <div>
+        <img id="Logo" src="/img/TurismORT.png"/>
+        </div>
+        <div class="title">
+            <h2>TurismOrt <br> Juntos desde siempre </h2> 
+        </div>
+    </div>
+    
+    <form action="Egracias.html" >
+        <h2>Información Familiar</h2> 
+        <br>
+        Cantidad de integrantes de la familia<br>
+        <input type="number" name="number" class="field" value="1" step="1" max="100" min="1" required ><br>
+        <br>
+        Pagina Web familiar<br>
+        <input type="url" class="field" name="URL" size="40" maxlength="100" required pattern="{3,100}"/><br>
+        <br>
+        Comentarios adicionales<br>
+        <textarea name="Comentarios adicionales" class="field" rows="7" cols="40"></textarea>
+        
+        <button type="submit" class="btn">Finalizar encuesta</button><br>
+        
+    </form>
+  
+    <a href="EncuestaPagina2.html"><button type="submit" class="btn-before">Volver</button></a>
+
+    <script>
+    function Validaciones() 
+    {
+        var intputElements = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < intputElements.length; i++) {
+            intputElements[i].oninvalid = function (e) {
+                e.target.setCustomValidity("");
+                if (!e.target.validity.valid) {
+                    
+                    if (e.target.name == "URL") {
+                        e.target.setCustomValidity("Ingrese una URL");
+                    }
+                }
+            }
+        }
+    }
+    
+    </script>
+
+</body>
+</html>
